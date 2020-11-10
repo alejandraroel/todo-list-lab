@@ -1,0 +1,23 @@
+.done{
+    text-decoration: line-through;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.todos-container{
+    border-radius: 5px;
+    background-color: white;
+}
+
+.task-container{
+    display: flex;
+    align-content: center;
+}
+
+.task-start{
+    display: flex;
+}

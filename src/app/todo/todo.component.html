@@ -1,0 +1,41 @@
+<!-- done in video -->
+<!-- <div class="todo-component">
+    To Do Component here!
+
+    <ul>
+        <li *ngFor="let todo of todos">{{todo.task}}</li>
+    </ul>
+</div> -->
+
+
+<!-- done with mitch  -->
+<main class="main">
+    <section class="todos-container">
+        <h1>TODO List</h1>
+        <form #todoForm="ngForm" (input)="setTaskFilterTerm(todoForm)">
+            <label for="filterTerm">Filter by Task</label>
+            <input type="text" id="filterTerm" name="filterTerm" ngModel />
+            <button>search</button>
+        </form>
+
+        <p>A place to store your todos</p>
+        <ol>
+            <li *ngFor="let todo of todos">
+                <div class="task-container">
+                    <div class="task-start">
+                        <button *ngIf="!todo.completed" (click)="completeToDo('todo', i)">Complete</button>
+                        <p [ngClass]="{done: todo.completed}">{{todo.task}}</p>
+                        <button (click)="todoCompleted('todo', i)">X</button>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <form #todoForm="ngForm" (ngSubmit)="addTask(todoForm)">
+            <p>Add your to-do</p>
+            <label for="newTask">New Task</label>
+            <input type="text" id="newTask" name="newTask" ngModel>
+            <button>Add</button>
+        </form>
+
+    </section>
+</main>
